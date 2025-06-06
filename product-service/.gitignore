@@ -1,0 +1,137 @@
+# ==============================
+# İşletim Sistemi Geçici / Gizli Dosyaları
+# ==============================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux / Diğer
+*~                # Sonunda '~' işareti ile biten geçici dosyalar
+.nfs*             # NFS tarafından oluşturulan geçici kilit dosyaları
+
+# ==============================
+# Log, Geçici ve Cache Dosyaları
+# ==============================
+*.log
+*.log.*            # log.1, log.2.gz gibi rotalanmış loglar
+*.tmp
+*.temp
+*.cache
+*.pid
+
+# Spring Boot / Java Test Raporları, Cache’leri
+hs_err_pid*
+*.pid
+spring.log
+logs/              # Spring Boot’un “logs” klasörünü yoksaymak için
+target/**/*.log    # target altındaki log dosyaları (örneğin Surefire raporları)
+suRefire-reports/  # Maven Surefire’ın test raporları
+jacoco.exec
+
+# ==============================
+# IDE / Editör Bazlı Ekstra Yoksayımlar
+# ==============================
+# IntelliJ IDEA (ek olarak)
+.idea/
+*.iws
+*.iml
+*.ipr
+# Project altında run config’leri, workspace vb. (Bazı durumlarda commit’e karışabiliyor)
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+
+# Eclipse / STS (ek olarak)
+.metadata/
+bin/**
+*.classpath
+*.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# NetBeans (ek olarak)
+nbproject/private/
+nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+# (İhtiyaca göre “build/” zaten yoksa eklemeyin)
+
+# VS Code (ek olarak)
+.vscode/
+
+# ==============================
+# Maven / Gradle Bazlı Ekstralar
+# ==============================
+# Maven local wrapper cache (IDE’nin otomatik tanımladığı wrapper’ı devre dışı bırakabilirsiniz)
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/mvn/wrapper/maven-wrapper.jar      # Eğer illa bu jar’ı takip etmek istiyorsanız
+
+# Gradle 
+.gradle/
+build/
+
+# IntelliJ’den otomatik alınmış .iml dosyaları veya “out” klasörü
+out/
+
+# ==============================
+# Çevresel ve Gizli Konfigürasyon Dosyaları
+# ==============================
+# Uygulama ayarları, şifre vb. içeren dosyalar
+.env
+.env.*               # .env.local, .env.dev gibi
+application-prod.properties
+application-local.properties
+keystore.jks
+*.jks
+
+# ==============================
+# Container / Docker ile İlgili
+# ==============================
+# Docker’ın oluşturabileceği geçici konteyner dosyaları
+docker-compose.override.yml
+docker-compose.*.yml
+
+# ==============================
+# Diğer Yabancı / Genel Şablonlar
+# ==============================
+# IDE veya derleme aracı tarafından üretilen
+.idea_modules/      # IntelliJ modülleri
+tmp/
+temp/
+cache/
+
+# ==============================
+# Otomatik Oluşan MAC / iOS Xcode Dosyaları
+# ==============================
+*.xcuserdata
+*.xcuserstate
+
+# ==============================
+# Bazı Örnek Ek Satırlar
+# ==============================
+# Eğer proje içinde “/test-output” veya “/coverage” gibi özel rapor klasörleri varsa onları da ekleyin
+test-output/
+coverage/
+
+# Eğer .log dışında .out, .err, .trace gibi uzantıları da görüyorsanız
+*.out
+*.err
+*.trace
+
+# Not: Aşağıdakiler isteğe bağlı – bazı dev araçları ek klasörler üretebilir
+# node_modules/   # Eğer frontend tarafında Node.js bağımlılıkları da varsa
+# dist/           # Eğer frontend’i ayrı build ediyorsanız

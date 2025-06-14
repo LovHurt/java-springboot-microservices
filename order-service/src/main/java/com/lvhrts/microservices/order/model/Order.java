@@ -1,4 +1,4 @@
-package com.lovehurts.microservices.order.model;
+package com.lvhrts.microservices.order.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

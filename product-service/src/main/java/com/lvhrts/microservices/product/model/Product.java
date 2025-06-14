@@ -1,4 +1,4 @@
-package com.lovehurts.microservices.product.model;
+package com.lvhrts.microservices.product.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.lovehurts.microservices.product;
+package com.lvhrts.microservices.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

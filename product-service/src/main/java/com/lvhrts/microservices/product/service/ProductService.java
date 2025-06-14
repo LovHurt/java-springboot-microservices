@@ -1,9 +1,9 @@
-package com.lovehurts.microservices.product.service;
+package com.lvhrts.microservices.product.service;
 
-import com.lovehurts.microservices.product.dto.ProductRequest;
-import com.lovehurts.microservices.product.dto.ProductResponse;
-import com.lovehurts.microservices.product.model.Product;
-import com.lovehurts.microservices.product.repository.ProductRepository;
+import com.lvhrts.microservices.product.dto.ProductRequest;
+import com.lvhrts.microservices.product.dto.ProductResponse;
+import com.lvhrts.microservices.product.model.Product;
+import com.lvhrts.microservices.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.lovehurts.microservices.product;
+package com.lvhrts.microservices.product;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;

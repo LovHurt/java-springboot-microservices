@@ -1,4 +1,4 @@
-package com.lovehurts.microservices.order;
+package com.lvhrts.microservices.order;
 
 import org.springframework.boot.SpringApplication;
 

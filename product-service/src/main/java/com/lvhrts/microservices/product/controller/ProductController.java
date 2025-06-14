@@ -1,9 +1,8 @@
-package com.lovehurts.microservices.product.controller;
+package com.lvhrts.microservices.product.controller;
 
-import com.lovehurts.microservices.product.dto.ProductRequest;
-import com.lovehurts.microservices.product.dto.ProductResponse;
-import com.lovehurts.microservices.product.model.Product;
-import com.lovehurts.microservices.product.service.ProductService;
+import com.lvhrts.microservices.product.dto.ProductRequest;
+import com.lvhrts.microservices.product.dto.ProductResponse;
+import com.lvhrts.microservices.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

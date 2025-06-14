@@ -1,4 +1,4 @@
-package com.lovehurts.microservices.product.dto;
+package com.lvhrts.microservices.product.dto;
 
 import java.math.BigDecimal;
 

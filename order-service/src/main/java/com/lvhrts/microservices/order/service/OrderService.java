@@ -1,8 +1,9 @@
-package com.lovehurts.microservices.order.service;
+package com.lvhrts.microservices.order.service;
 
-import com.lovehurts.microservices.order.dto.OrderRequest;
-import com.lovehurts.microservices.order.model.Order;
-import com.lovehurts.microservices.order.repository.OrderRepository;
+import com.lvhrts.microservices.order.client.InventoryClient;
+import com.lvhrts.microservices.order.dto.OrderRequest;
+import com.lvhrts.microservices.order.model.Order;
+import com.lvhrts.microservices.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,16 +14,21 @@ import java.util.UUID;
 public class OrderService {
 
     private final OrderRepository orderRepository;
+    private final InventoryClient inventoryClient;
 
     public void placeOrder(OrderRequest orderRequest) {
-        //map orderreq to order object
-        Order order = new Order();
-        order.setOrderNumber(UUID.randomUUID().toString());
-        order.setPrice(orderRequest.price());
-        order.setSkuCode(orderRequest.skuCode());
-        order.setQuantity(orderRequest.quantity());
+        var isProductInStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
 
-        //save order to orderrepository
-        orderRepository.save(order);
+        if(isProductInStock) {
+            Order order = new Order();
+            order.setOrderNumber(UUID.randomUUID().toString());
+            order.setPrice(orderRequest.price());
+            order.setSkuCode(orderRequest.skuCode());
+            order.setQuantity(orderRequest.quantity());
+            orderRepository.save(order);
+        }
+        else {
+            throw new RuntimeException("product with skucode " + orderRequest.skuCode() + " is not in stock");
+        }
     }
 }
